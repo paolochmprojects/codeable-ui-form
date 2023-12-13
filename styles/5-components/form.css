@@ -1,0 +1,32 @@
+.join-form {
+    max-width: var(--width-2xl);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-8);
+    margin-inline: auto;
+}
+
+.form-input small {
+    display: block;
+    text-align: left;
+    margin-top: var(--spacing-2);
+    font-family: var(--text);
+    font-weight: 400;
+    font-size: var(--font-sm); /* 14px */
+    color: var(--muted-foreground);
+    line-height: 20px;  /* change this */
+}
+
+.form-input--2fr {
+    grid-column: span 2;
+}
+
+@media (max-width: 40rem) {
+    .join-form {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .form-input--2fr {
+        grid-column: span 1;
+    }
+}
